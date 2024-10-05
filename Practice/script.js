@@ -1,8 +1,14 @@
-const addButton = document.querySelector(".add-btn")
+const addButton = document.querySelector(".add-btn");
 
 addButton.addEventListener('click', function () {
-    const inputTask = document.querySelector(".input-task").value
-    console.log(inputTask);
-    const taskContainer = document.querySelector(".tasks-container").innerHTML = (`<div class="task"><span>${inputTask}</span><button class="delete-btn">delete</button>`)
+    const inputValue = document.getElementById("input-task")
+    const taskName = inputValue.value.trim()
+    if (taskName == "") {
+        console.log("please enter task");
+    }
+        const taskContainer = document.querySelector(".tasks-container")
+        const ul = document.createElement("ul")
+        const li = document.createElement("li")
+        ul.appendChild(li)
     
 })

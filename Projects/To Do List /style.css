@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Poppins", system-ui;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
 	justify-content: center;
 	width: 100vw;
 	height: 100vh;
-	background-color: blueviolet;
+	background: url(bg.jpg)no-repeat center center/cover;
 }
 
 .container {
@@ -18,17 +19,24 @@ body {
 	align-items: center;
 	flex-direction: column;
 	width: 400px;
-	height: 400px;
+	height: 450px;
 	border: 1px solid white;
+	backdrop-filter: blur(50px);
+	border-radius: 10px;
+	padding: 20px 0;
+}
+
+.container h1 {
+	color: white;
 }
 
 .add-task {
-	margin-top: 50px;
+	margin-top: 20px;
 }
 
 .input-task {
 	padding: 10px;
-	width: 300px;
+	width: 285px;
 }
 
 .add-btn {
@@ -37,6 +45,7 @@ body {
 	color: white;
 	border: 2px solid white;
 	cursor: pointer;
+	border-radius: 4px;
 }
 
 .add-btn:active {
@@ -47,24 +56,43 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	margin-top: 50px;
+	margin-top: 20px;
+	overflow: auto;
+}
+
+.tasks-container::-webkit-scrollbar-track {
+  padding: 2px 0;
+  background-color: white;
+	border-radius: 4px;
+}
+
+.tasks-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.tasks-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #c13e70;
 }
 
 ul {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 360px;
+	width: 340px;
 	padding: 4px 10px;
 	background-color: white;
 	list-style-type: none;
 	border-radius: 4px;
+	margin-right: 10px;
 }
 
 ul button {
 	padding: 10px 20px;
-	background-color: blueviolet;
+	background-color: #c13e70;
 	color: white;
 	border: 2px solid white;
 	cursor: pointer;
+	border-radius: 4px;
 }

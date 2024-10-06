@@ -4,7 +4,7 @@ addButton.addEventListener('click', function () {
 	const inputValue = document.querySelector(".input-task")
 	const taskName = inputValue.value.trim()
 	if (taskName == "") {
-		alert("please enter your task")
+		alert("Please Enter Your Task")
 	}else {
 		const taskContainer = document.querySelector(".tasks-container")
 		const createUl = document.createElement("ul")

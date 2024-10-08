@@ -12,7 +12,7 @@
 
 .cards-container {
     position: absolute;
-    top: 300px;
+    bottom: 150px;
     right: 20px;
     display: flex;
     align-items: center;
@@ -37,4 +37,24 @@
 }
 .card-4 {
     background: url(images/img-4.jpg)no-repeat center center/cover;
+}
+
+.btn {
+    position: absolute;
+    bottom: 150px;
+    left: 80px;
+}
+
+.pre-btn,
+.next-btn {
+    background-color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pre-btn:active,
+.next-btn:active {
+    transform: scale(0.90);
 }

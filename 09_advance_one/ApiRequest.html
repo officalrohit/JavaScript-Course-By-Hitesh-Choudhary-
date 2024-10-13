@@ -6,20 +6,24 @@
     <title>API Request</title>
 </head>
 <body style="background-color: #212121; color: white;">
-    
+    <button>show name</button>
 </body>
 <script>
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
-    xhr.onreadystatechange = function () {
-        console.log(xhr.readyState);        
-        if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText)
-            console.log(data.followers);
+    document.querySelector("button").addEventListener('click', function () {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUrl)
+        xhr.onreadystatechange = function () {
+            console.log(xhr.readyState);        
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(this.responseText)
+                console.log(data.followers);
+                console.log(data.name)
+            }
         }
-    }
+        xhr.send()
+    })
+            
     
-    xhr.send()
 </script>
 </html>

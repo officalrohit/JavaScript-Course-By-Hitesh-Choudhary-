@@ -30,3 +30,26 @@ console.log(arrTwo[9]);
 // hasOwnProperty(Object.prototype, 10)
 
 // holes are very expensive in js
+
+const arrThree = [1, 2, 3, 4, 5]
+console.log(arrThree[2]);
+
+// SMI > Double > Packed
+// H_SMI > H_double > H_Packed
+
+const arrFour = new Array(3)
+// Just 3 Holes. Holery_SMI_Elements
+arrFour[0] = '1' // Holey_Elements
+arrFour[1] = '2' // Holey_Elements
+arrFour[2] = '3' // Holey_Elements
+
+const arrFive = []
+arrFive.push('1') // Packed_Elements
+arrFive.push('2') // Packed_Elements
+arrFive.push('3') // Packed_Elements
+
+const arrSix = [1, 2, 3, 4, 5]
+
+arrSix.push(Infinity)
+
+// for, for-of , forEach

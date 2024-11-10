@@ -7,7 +7,9 @@
 //         break;
 // }
 
-const month = "march"
+let month;
+
+month = prompt("Enter your Month").toLowerCase();
 
 switch (month) {
     case "jan":

@@ -25,4 +25,3 @@ let isLoggedIn = false
 // Objects
 
 console.log(typeof undefined);
-

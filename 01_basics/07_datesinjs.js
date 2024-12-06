@@ -26,4 +26,4 @@ newDate.toLocaleString('default',{
     weekday: "long",
 })
 
-console.log(newDate);
+// console.log(newDate);
